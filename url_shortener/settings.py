@@ -28,7 +28,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.getenv('HOST_IP')]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.getenv('HOST_IP'), 'url-shortener-app-12c3ec2255ca.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://url-shortener-app-12c3ec2255ca.herokuapp.com']
+
+
 
 IS_HEROKU_APP = "DYNO" in os.environ and "CI" not in os.environ
 
